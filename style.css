@@ -57,13 +57,19 @@ main {
 
 .book {
     display: flex;
+    /* flex-direction: row; */
     align-items: center;
     min-height: 100px;
     border-radius: 5px;
     padding: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     background-color: rgb(255, 241, 241);
     position: relative;
+}
+
+.book:nth-child(odd) {
+    flex-direction: row-reverse;
+    background-color: rgb(245, 231, 231);
 }
 
 .book-desc {
@@ -71,7 +77,8 @@ main {
     text-align: justify;
     text-indent: 30px;
     padding: 0 30px;
-    height: 140px;
+    margin-bottom: 20px;
+    height: 160px;
     overflow: hidden;
 }
 
@@ -80,8 +87,12 @@ main {
 }
 
 .book-img {
-    max-height: 150px;
+    height: 150px;
     margin: 0 0 0 20px;
+}
+
+.book:nth-child(odd) .book-img {
+    margin: 0;
 }
 
 .book-desc h2 {
@@ -89,7 +100,7 @@ main {
     margin-bottom: 10px;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+    text-align: right;
 }
 
 figure > img {
@@ -114,7 +125,7 @@ figure > img:hover {
     position: absolute;
     width: 60px;
     height: 25px;
-    bottom: 5px;
+    bottom: 10px;
     left: 40%;
     border: 0;
     color: whitesmoke;
@@ -134,6 +145,35 @@ figure > img:hover {
 .btn:active, 
 .btn:focus {
     outline: none;
+}
+
+@media (max-width: 650px) {
+    .book {
+        flex-direction: column !important;
+        padding-bottom: 30px;
+    }
+    .book-desc {
+        min-height: 280px;
+    }
+    .book h2 {
+        text-align: center;
+        margin: 15px 0;
+    }
+    .book .book-img {
+        height: 200px;
+        order: -1;
+        margin: 0;
+    }
+    .book img {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .book img:hover {
+        transform: none;
+    }
+    .btn {
+        left: 45%;
+    }
 }
 
 .open {
