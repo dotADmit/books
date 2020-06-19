@@ -19,8 +19,16 @@
                 <figure class="book-img">
                     <img src="img/books/hot.jpg" alt="book">
                 </figure>
+                <input class="btn" type="button">
             </div>
         </main>
     </div>
+    <script>
+        let classOpen = document.querySelector('.book-desc');
+        let openBtn = document.querySelector('.btn');
+        openBtn.onclick = function () {
+            classOpen.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
