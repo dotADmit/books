@@ -147,7 +147,7 @@ figure > img:hover {
     outline: none;
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
     .book {
         flex-direction: column !important;
         padding-bottom: 30px;
