@@ -3,7 +3,7 @@ mixin book-review(imgName, author, bookName, desc)
 		.books__item-desc
 			img.books__item-img(src='source/img/books/'+imgName alt=bookName)
 			.books__item-header= author
-				p= bookName
+				p.books__item-name= bookName
 			p= desc
 		input.btn(type='button')
 	
