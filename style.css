@@ -64,6 +64,28 @@ a {
     position: relative;
 }
 
+.date-rate {
+	min-width: 55px;
+	position: absolute;
+	top: 15px;
+	background-color: rgba(0, 82, 2, 0.62);
+	color: rgb(243, 255, 237);
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+}
+.rate {
+	padding-left: 20px;
+	font-size: 11px;
+}
+.rate::before{
+	position: absolute;
+	top: 24px;
+	left: 8px;
+	content: "\2730";
+	font-size: 20px;
+	font-weight: bold;
+}
 .books__item-desc {
     text-align: justify;
     margin-bottom: 15px;
@@ -77,7 +99,7 @@ a {
 }
 
 .books__item-name {
-    margin: 0;
+		margin: 0;
 }
 
 .books__item-img {
@@ -92,9 +114,15 @@ a {
     float: left;
 }
 
+.books__item:nth-child(odd) .date-rate {
+	top: 15px;
+	right: 20px;
+}
+
 .books__item-header {
     margin: 0;
-    margin-bottom: 10px;
+		margin-bottom: 10px;
+		padding-right: 70px;
     font-size: 20px;
     text-align: center;
     font-weight: 600;
@@ -125,6 +153,7 @@ a {
 		position: fixed;
 		top: 0;
 		z-index: 10;
+		opacity: 0.95;
 	}
 	.books {
 		margin-top: 70px;
@@ -148,6 +177,9 @@ a {
 	.books__item-desc > p {
 		text-indent: 0px;
 		margin: 0;
+	}
+	.books__item-header {
+		padding: 0;
 	}
 }
 
